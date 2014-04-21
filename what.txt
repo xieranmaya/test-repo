@@ -10,3 +10,6 @@ the quick brown fox
 
 
 测试core.editor
+
+
+add on dev1
