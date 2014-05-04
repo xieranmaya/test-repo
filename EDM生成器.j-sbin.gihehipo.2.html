@@ -1,0 +1,84 @@
+<script src="http://code.jquery.com/jquery-git2.js"></script>
+
+<style>
+  .wrapper{
+    width:600px;
+  }
+  .wrapper tr.even{
+    background-color: grey;
+  }
+  .wrapper img{
+    width:80px;
+    height: 80px;
+    border:8px solid #369;
+  }
+  td{
+    border:1px solid green;
+  }
+  
+</style>
+
+<table class="wrapper">
+  <tr class="even">
+    <td>01</td>
+    <td>02</td>
+    <td>03</td>
+  </tr>
+  <tr>
+    <td>01</td>
+    <td>02</td>
+    <td><img src="" alt=""></td>
+  </tr>
+  <tr>
+    <td>01</td>
+    <td>02</td>
+    <td>03</td>
+  </tr>
+  <tr>
+    <td>01</td>
+    <td>02</td>
+    <td>03</td>
+  </tr>
+  <tr>
+    <td>01</td>
+    <td>02</td>
+    <td>03</td>
+  </tr>
+</table>
+
+
+<style id="jsbin-css">
+
+</style>
+<script>
+$(function(){
+  //inlineStyle();
+  //removeStyleTag();
+});
+function removeStyleTag(){
+  $('style').remove();
+}
+function inlineStyle(){
+  $("style")
+    .text() 
+    .replace(/\s{2,}/gm,' ')
+    .replace(/\r|\n/gm,'')
+    .replace(/\}/gm,'}#####')
+    .trim()
+    .split('#####')
+    .filter(function(style){
+      return style.length>3;
+    })
+    .map(function(style){
+      return style.trim().replace(/\n|\r/igm,'');
+    })
+    .map(function(style){
+      return style.match(/(.*)\{(.*)\}/m);
+    })
+    .forEach(function(match){
+      var selector = match[1].trim();
+      var style_value = match[2].trim();
+      $(selector).attr('style',style_value);
+    });
+}
+</script>
