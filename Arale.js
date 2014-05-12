@@ -1,4 +1,4 @@
-// pig.js 
+// pig.js
 define(function(require, exports, module){
 	var Class = require("arale/class/1.1.0/class");
 
@@ -14,7 +14,7 @@ define(function(require, exports, module){
 	module.exports = Pig;
 });
 
-// redpig.js 
+// redpig.js
 define(function(require, exports, module){
 	var Pig = require("./pig");
 
@@ -32,7 +32,7 @@ define(function(require, exports, module){
 define(function(require, exports, module){
 	exports.fly = function(){
 		alert("I can fly.");
-	}
+	};
 });
 
 // flyable-red-pig.js
