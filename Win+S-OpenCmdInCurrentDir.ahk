@@ -9,3 +9,6 @@ Clipboard := ClipSaved
 ClipSaved =
 return
 #IfWinActive
+
+
+; src: http://lifehacker.com/5306401/open-a-new-command-prompt-from-explorer-with-a-hotkey
