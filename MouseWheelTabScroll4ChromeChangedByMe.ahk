@@ -17,7 +17,7 @@ WheelUp::
 WheelDown::
 	MouseGetPos,, ypos, id
 	WinGetClass, class, ahk_id %id%
-	If (ypos < 45 and ( InStr(class,"Chrome_WidgetWin") or InStr(class,"MozillaWindowClass") or InStr(class,"IEFrame") or InStr(class,"{1C03B488-D53B-4a81-97F8-754559640193}") ) )
+	If (ypos < 45 and ( InStr(class,"Chrome_WidgetWin") or InStr(class,"MozillaWindowClass") or InStr(class,"IEFrame") or InStr(class,"ApplicationFrameWindow") or InStr(class,"{1C03B488-D53B-4a81-97F8-754559640193}") ) )
 	{
 		IfWinNotActive ahk_id %id%
 			WinActivate ahk_id %id%
